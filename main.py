@@ -51,12 +51,14 @@ if generate_button:
           ],
           description="You are An AI agent that can generate audio using the elevenlabs API",
           instructions=[
-            "when the user provide a blog post url:",
-            "1. use FireCrawlTools to scrape the blog content",
-            "2. Create a concise summary of the blog content that is NO MORE the 2000 characters long",
-            "3. The summary should capture the main points while engaging and conversational.",
-            "4. use the ElevennLabsTools to convert the summary to audio",
-            "Ensure the summary is within the 2000 character limit to avoid ElevenLabs API limits."
+            instructions=[
+    "You are an AI agent that converts blog posts into podcasts.",
+    "Steps you MUST follow strictly:",
+    "1. Use FirecrawlTools to scrape the full blog content from the URL.",
+    "2. Summarize the blog in a conversational podcast tone.",
+    "3. Ensure the summary is UNDER 1500 characters.",
+    "4. You MUST call ElevenLabsTools to convert the summary into audio.",
+    "5. Return ONLY the generated audio output."
           ],
           markdown= True,
           debug_mode= True
@@ -66,6 +68,8 @@ if generate_button:
           f"Convert the blog content to a podcast: {url}"
         )
 
+        st.write(podcast)
+        
         save_dir="audio_generations"
         os.makedirs(save_dir, exist_ok=True)
 
@@ -94,3 +98,4 @@ if generate_button:
       except Exception as e:
         st.error(f"An error occured :{e}")
         logger.error(f"streamlit app error:{e}")
+          
