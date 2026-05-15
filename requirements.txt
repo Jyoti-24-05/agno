@@ -1,5 +1,6 @@
 firecrawl-py
-openai
+groq
 elevenlabs
 agno
 streamlit
+
