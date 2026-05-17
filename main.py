@@ -147,7 +147,7 @@ if generate_button:
       except Exception as e:
         error_str = str(e)
         if "401" in error_str or "unusual_activity" in error_str or "Free Tier" in error_str:
-          st.error("❌ ElevenLabs API Error: Your free tier account has been blocked for unusual activity.")
+          st.error("ElevenLabs API Error: Your free tier account has been blocked for unusual activity.")
           st.info("Solutions:\n" +
                   "1. Try using a different network (not VPN/proxy)\n" +
                   "2. Upgrade to a paid ElevenLabs plan\n" +
@@ -155,7 +155,7 @@ if generate_button:
                   "4. Wait 24 hours and try again\n" +
                   f"\nOriginal error: {e}")
         elif "400" in error_str or "tool_use_failed" in error_str:
-          st.error("❌ Groq API Error: Failed to call text_to_speech function correctly.")
+          st.error("Groq API Error: Failed to call text_to_speech function correctly.")
           st.info("This usually means the function parameters are malformed. Please try again.")
           logger.error(f"Groq function call error:{e}")
         else:
