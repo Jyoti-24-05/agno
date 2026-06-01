@@ -155,7 +155,7 @@ if generate_button:
                   "4. Wait 24 hours and try again\n" +
                   f"\nOriginal error: {e}")
         elif "400" in error_str or "tool_use_failed" in error_str:
-          st.error("Groq API Error: Failed to call text_to_speech function correctly.")
+          st.error("streamlit run main.pyGroq API Error: Failed to call text_to_speech function correctly.")
           st.info("This usually means the function parameters are malformed. Please try again.")
           logger.error(f"Groq function call error:{e}")
         else:
