@@ -1,12 +1,17 @@
 <div align="center">
 # 🎙️ Article to Podcast Generator
 
-Convert any blog post or article into a podcast audio file using AI — completely free.
+A free, end-to-end AI app that turns any blog post or article URL into a downloadable podcast audio file — no paid APIs required.
 
 
 🌐 **Live Site → [5mftrnudx9kaescr3zqivz.streamlit.app](https://5mftrnudx9kaescr3zqivz.streamlit.app/)**
 
 </div>
+
+---
+
+## What It Does
+You paste a URL → the app scrapes it, summarizes it, and converts it to speech. That's it. You get a playable, downloadable MP3 in under 30 seconds.
 
 ---
 
@@ -24,7 +29,7 @@ Convert any blog post or article into a podcast audio file using AI — complete
 ### Home Page
 <img src="./public/home.png" alt="Home Page" width="90%" />
 
-### Search — explore bit
+### gen podcast
 <img src="./public/podcast.png" alt="Search" width="90%" />
 
 <!-- ### Playlist View
